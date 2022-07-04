@@ -1,7 +1,7 @@
-Angry
-Disgust
-Fear
-Happy
-Sad
-Surprise
+Marah
+Jijik
+Takut atau Bingung
+Senang
+Sedih
+Kaget
 Neutral
