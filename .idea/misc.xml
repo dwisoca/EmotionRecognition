@@ -4,10 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/LP3 UM/Documents/.android/EmotionRecognition/app/src/main/res/layout/activity_intro.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/LP3 UM/Documents/.android/EmotionRecognition/app/src/main/res/layout/activity_level1.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/LP3 UM/Documents/.android/EmotionRecognition/app/src/main/res/layout/activity_level1_contoh.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/LP3 UM/Documents/.android/EmotionRecognition/app/src/main/res/layout/activity_level2.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/LP3 UM/Documents/.android/EmotionRecognition/app/src/main/res/layout/activity_level3.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/LP3 UM/Documents/.android/EmotionRecognition/app/src/main/res/layout/activity_menu.xml" value="0.3645833333333333" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
