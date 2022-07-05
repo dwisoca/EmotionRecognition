@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">EmotionRecognition</string>
+    <string name="ResponNegatifLevel3">Maaf, ekspresimu kurang tepat</string>
+    <string name="ResponPositifLevel3">Sip, ekspresi kamu benar</string>
 </resources>

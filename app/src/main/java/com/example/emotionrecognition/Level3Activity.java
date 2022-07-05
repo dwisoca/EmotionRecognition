@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.example.predictivemodels.Classification;
 import com.example.predictivemodels.TensorFlowClassifier;
 
@@ -28,11 +29,12 @@ public class Level3Activity extends AppCompatActivity {
     CardView cardSenang, cardSedih, cardTakut, cardMarah;
     String emosi;
     private String TAG;
-    ImageView faceImageView;
-    LinearLayout layoutOpsi, layoutHasil;
+    ImageView faceImageView, tblHome, tblReload;
+    LinearLayout layoutOpsi, layoutHasil, layoutTblHome, layoutTblReload;
     TensorFlowClassifier classifier;
     static final int PIXEL_WIDTH = 48;
     TextView textHasil;
+    LottieAnimationView lottieRespon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,11 +55,54 @@ public class Level3Activity extends AppCompatActivity {
                 emosi = "Senang";
             }
         });
+        cardSedih.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dispatchTakePictureIntent();
+                emosi = "Sedih";
+            }
+        });
+        cardMarah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dispatchTakePictureIntent();
+                emosi = "Marah";
+            }
+        });
+        cardTakut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dispatchTakePictureIntent();
+                emosi = "Takut";
+            }
+        });
 
         faceImageView = findViewById(R.id.facialImageView);
         layoutOpsi = findViewById(R.id.layout_opsi);
         layoutHasil = findViewById(R.id.layout_hasil);
         textHasil = findViewById(R.id.txt_hasil_level3);
+        tblHome = findViewById(R.id.img_home_level3);
+        tblReload = findViewById(R.id.img_reload);
+        layoutTblHome = findViewById(R.id.layout_tbl_home);
+        layoutTblReload = findViewById(R.id.layout_tbl_reload);
+        lottieRespon = findViewById(R.id.lottie_respon_level3);
+
+        tblReload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                layoutHasil.setVisibility(View.GONE);
+                layoutTblReload.setVisibility(View.GONE);
+                layoutOpsi.setVisibility(View.VISIBLE);
+                layoutTblHome.setVisibility(View.VISIBLE);
+            }
+        });
+        tblHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Level3Activity.this, MenuActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void detectEmotion(){
@@ -99,9 +144,11 @@ public class Level3Activity extends AppCompatActivity {
                         res.getConf());
                 //Membuat kondisi sesuai tombol
                 if (text.contains(emosi) && res.getConf()>0.4){
-                    textHasil.setText(text + "Mantap");
+                    textHasil.setText(R.string.ResponPositifLevel3);
+                    lottieRespon.setAnimation("ThumbsUp.json");
                 } else {
-                    textHasil.setText(text);
+                    textHasil.setText("Maaf, ekspresimu kurang tepat\nitu adalah ekspresi " + res.getLabel());
+                    lottieRespon.setAnimation("ThumbsDown.json");
                 }
             }}
         catch (Exception  e){
@@ -145,7 +192,9 @@ public class Level3Activity extends AppCompatActivity {
             faceImageView.setImageBitmap(imageBitmap);
             detectEmotion();
             layoutHasil.setVisibility(View.VISIBLE);
+            layoutTblReload.setVisibility(View.VISIBLE);
             layoutOpsi.setVisibility(View.GONE);
+            layoutTblHome.setVisibility(View.GONE);
         }
     }
 

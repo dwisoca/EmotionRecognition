@@ -29,7 +29,8 @@
             android:layout_height="wrap_content"
             app:cardCornerRadius="12dp"
             android:backgroundTint="@color/lev1_green"
-            android:layout_marginBottom="13dp">
+            android:layout_marginBottom="13dp"
+            android:id="@+id/card_level1">
             <LinearLayout
                 android:layout_width="219dp"
                 android:layout_height="125dp"
@@ -52,7 +53,8 @@
             android:layout_height="wrap_content"
             app:cardCornerRadius="12dp"
             android:backgroundTint="@color/lev2_yellow"
-            android:layout_marginBottom="13dp">
+            android:layout_marginBottom="13dp"
+            android:id="@+id/card_level2">
             <LinearLayout
                 android:layout_width="219dp"
                 android:layout_height="125dp"
@@ -75,7 +77,8 @@
             android:layout_height="wrap_content"
             app:cardCornerRadius="12dp"
             android:backgroundTint="@color/lev3_pink"
-            android:layout_marginBottom="13dp">
+            android:layout_marginBottom="13dp"
+            android:id="@+id/card_level3">
             <LinearLayout
                 android:layout_width="219dp"
                 android:layout_height="125dp"

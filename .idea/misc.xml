@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/activity_intro.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/activity_level1.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/activity_level1_contoh.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/activity_level2.xml" value="0.36666666666666664" />
@@ -10,6 +11,7 @@
         <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/activity_level3.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/activity_level3_hasil.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/activity_menu.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
