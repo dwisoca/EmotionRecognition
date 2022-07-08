@@ -5,8 +5,11 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class Level1Activity extends AppCompatActivity {
 
@@ -30,7 +33,7 @@ public class Level1Activity extends AppCompatActivity {
         cardKuisLevel1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Level1Activity.this, Level1ContohActivity.class);
+                Intent intent = new Intent(Level1Activity.this, Level1KuisActivity.class);
                 startActivity(intent);
             }
         });
@@ -42,5 +45,10 @@ public class Level1Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MenuActivity.class);
+        startActivity(intent);
     }
 }

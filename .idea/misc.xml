@@ -6,12 +6,16 @@
         <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/activity_intro.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/activity_level1.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/activity_level1_contoh.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/activity_level1_kuis.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/activity_level2.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/activity_level2_contoh.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/activity_level2_kuis.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/activity_level3.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/activity_level3_hasil.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/activity_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/activity_menu.xml" value="0.2722222222222222" />
+        <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/dialog_benar.xml" value="0.2722222222222222" />
+        <entry key="..\:/Users/DwiSocaBaskara/AndroidStudioProjects/EmotionRecognition/app/src/main/res/layout/dialog_salah.xml" value="0.365625" />
       </map>
     </option>
   </component>

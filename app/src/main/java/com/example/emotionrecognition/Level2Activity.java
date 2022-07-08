@@ -30,7 +30,7 @@ public class Level2Activity extends AppCompatActivity {
         cardKuisLevel2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Level2Activity.this, Level1ContohActivity.class);
+                Intent intent = new Intent(Level2Activity.this, Level2KuisActivity.class);
                 startActivity(intent);
             }
         });
@@ -42,5 +42,11 @@ public class Level2Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MenuActivity.class);
+        startActivity(intent);
     }
 }

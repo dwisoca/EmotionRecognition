@@ -10,6 +10,7 @@ import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -146,9 +147,13 @@ public class Level3Activity extends AppCompatActivity {
                 if (text.contains(emosi) && res.getConf()>0.4){
                     textHasil.setText(R.string.ResponPositifLevel3);
                     lottieRespon.setAnimation("ThumbsUp.json");
+                    final MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.sfx_ok);
+                    mp.start();
                 } else {
                     textHasil.setText("Maaf, ekspresimu kurang tepat\nitu adalah ekspresi " + res.getLabel());
                     lottieRespon.setAnimation("ThumbsDown.json");
+                    final MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.sfx_wrong);
+                    mp.start();
                 }
             }}
         catch (Exception  e){
@@ -214,5 +219,11 @@ public class Level3Activity extends AppCompatActivity {
                 }
             }
         }).start();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MenuActivity.class);
+        startActivity(intent);
     }
 }

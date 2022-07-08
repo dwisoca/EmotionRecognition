@@ -11,6 +11,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.VideoView;
 
 public class Level1ContohActivity extends AppCompatActivity {
@@ -20,15 +21,24 @@ public class Level1ContohActivity extends AppCompatActivity {
     Uri uri;
     String emosi = "Senang";
     VideoView simpleVideoView;
+    TextView teksJudul;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level1_contoh);
 
+        teksJudul = findViewById(R.id.txt_judul_contoh_level1);
+
         // initiate a video view
         simpleVideoView = findViewById(R.id.video_level1_contoh);
-        playVideo(R.raw.smile_sample);
+        simpleVideoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mediaPlayer) {
+                mediaPlayer.setVolume(0,0);
+            }
+        });
+        playVideo(R.raw.l_senang_level1);
         simpleVideoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mediaPlayer) {
@@ -49,40 +59,48 @@ public class Level1ContohActivity extends AppCompatActivity {
         cardSenang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                playVideo(R.raw.smile_sample);
+                playVideo(R.raw.l_senang_level1);
                 disableAllButton();
                 cardSenang.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.lev1_green));
                 emosi = "Senang";
+                resetButtonNext();
+                teksJudul.setText("Ekspresi Senang");
             }
         });
         cardSedih = findViewById(R.id.card_sedih_level1);
         cardSedih.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                playVideo(R.raw.sad_video);
+                playVideo(R.raw.l_sedih_level1);
                 disableAllButton();
                 cardSedih.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.lev1_green));
                 emosi = "Sedih";
+                resetButtonNext();
+                teksJudul.setText("Ekspresi Sedih");
             }
         });
         cardMarah = findViewById(R.id.card_marah_level1);
         cardMarah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                playVideo(R.raw.smile_sample);
+                playVideo(R.raw.l_marah_level1);
                 disableAllButton();
                 cardMarah.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.lev1_green));
                 emosi = "Marah";
+                resetButtonNext();
+                teksJudul.setText("Ekspresi Marah");
             }
         });
         cardTakut = findViewById(R.id.card_takut_level1);
         cardTakut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                playVideo(R.raw.sad_video);
+                playVideo(R.raw.l_takut_level1);
                 disableAllButton();
                 cardTakut.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.lev1_green));
                 emosi = "Takut";
+                resetButtonNext();
+                teksJudul.setText("Ekspresi Takut");
             }
         });
         tblPrevVideo = findViewById(R.id.img_tbl_prev);
@@ -92,13 +110,13 @@ public class Level1ContohActivity extends AppCompatActivity {
                 tblPrevVideo.setVisibility(View.GONE);
                 tblNextVideo.setVisibility(View.VISIBLE);
                 if(emosi.contains("Senang")){
-                    playVideo(R.raw.smile_sample);
+                    playVideo(R.raw.l_senang_level1);
                 } else if (emosi.contains("Sedih")){
-                    playVideo(R.raw.sad_video);
+                    playVideo(R.raw.l_sedih_level1);
                 } else if (emosi.contains("Marah")){
-                    playVideo(R.raw.smile_sample);
+                    playVideo(R.raw.l_marah_level1);
                 } else if (emosi.contains("Takut")){
-                    playVideo(R.raw.sad_video);
+                    playVideo(R.raw.l_takut_level1);
                 }
             }
         });
@@ -109,16 +127,21 @@ public class Level1ContohActivity extends AppCompatActivity {
                 tblNextVideo.setVisibility(View.GONE);
                 tblPrevVideo.setVisibility(View.VISIBLE);
                 if(emosi.contains("Senang")){
-                    playVideo(R.raw.sad_video);
+                    playVideo(R.raw.p_senang_level1);
                 } else if (emosi.contains("Sedih")){
-                    playVideo(R.raw.smile_sample);
+                    playVideo(R.raw.p_sedih_level1);
                 } else if (emosi.contains("Marah")){
-                    playVideo(R.raw.sad_video);
+                    playVideo(R.raw.p_marah_level1);
                 } else if (emosi.contains("Takut")){
-                    playVideo(R.raw.smile_sample);
+                    playVideo(R.raw.p_takut_level1);
                 }
             }
         });
+    }
+
+    private void resetButtonNext() {
+        tblPrevVideo.setVisibility(View.GONE);
+        tblNextVideo.setVisibility(View.VISIBLE);
     }
 
     private void playVideo(int aset) {
@@ -132,5 +155,11 @@ public class Level1ContohActivity extends AppCompatActivity {
         cardMarah.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.lev1_grey));
         cardSedih.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.lev1_grey));
         cardTakut.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.lev1_grey));
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, Level1Activity.class);
+        startActivity(intent);
     }
 }

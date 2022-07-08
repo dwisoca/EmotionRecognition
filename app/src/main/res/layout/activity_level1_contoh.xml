@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Level1ContohActivity">
+    tools:context=".Level1ContohActivity"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,15 +25,16 @@
             android:text="Level 1"
             android:textColor="@color/black"
             android:textSize="20dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:layout_marginBottom="40dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Contoh Ekspresi Dasar"
+            android:text="Ekspresi Senang"
             android:textColor="@color/black"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:layout_marginBottom="40dp"/>
+            android:id="@+id/txt_judul_contoh_level1"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"

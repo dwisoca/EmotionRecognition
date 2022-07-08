@@ -1,7 +1,7 @@
 Marah
-Jijik
+Takut - Jijik
 Takut atau Bingung
 Senang
 Sedih
-Kaget
-Neutral
+Takut - Kaget
+Takut - Neutral

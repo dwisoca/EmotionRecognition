@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuActivity">
+    tools:context=".MenuActivity"
+    android:background="@color/white">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -25,14 +26,15 @@
             android:textStyle="bold"
             android:layout_marginBottom="40dp"/>
         <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="12dp"
             android:backgroundTint="@color/lev1_green"
             android:layout_marginBottom="13dp"
-            android:id="@+id/card_level1">
+            android:id="@+id/card_level1"
+            android:layout_marginHorizontal="40dp">
             <LinearLayout
-                android:layout_width="219dp"
+                android:layout_width="match_parent"
                 android:layout_height="125dp"
                 android:orientation="vertical"
                 android:gravity="center">
@@ -45,18 +47,20 @@
                     android:layout_height="wrap_content"
                     android:text="Level 1"
                     android:textColor="@color/black"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:textSize="18dp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="12dp"
             android:backgroundTint="@color/lev2_yellow"
             android:layout_marginBottom="13dp"
-            android:id="@+id/card_level2">
+            android:id="@+id/card_level2"
+            android:layout_marginHorizontal="40dp">
             <LinearLayout
-                android:layout_width="219dp"
+                android:layout_width="match_parent"
                 android:layout_height="125dp"
                 android:orientation="vertical"
                 android:gravity="center">
@@ -69,18 +73,20 @@
                     android:layout_height="wrap_content"
                     android:text="Level 2"
                     android:textColor="@color/black"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:textSize="18dp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="12dp"
             android:backgroundTint="@color/lev3_pink"
             android:layout_marginBottom="13dp"
-            android:id="@+id/card_level3">
+            android:id="@+id/card_level3"
+            android:layout_marginHorizontal="40dp">
             <LinearLayout
-                android:layout_width="219dp"
+                android:layout_width="match_parent"
                 android:layout_height="125dp"
                 android:orientation="vertical"
                 android:gravity="center">
@@ -93,7 +99,8 @@
                     android:layout_height="wrap_content"
                     android:text="Level 3"
                     android:textColor="@color/black"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:textSize="18dp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
